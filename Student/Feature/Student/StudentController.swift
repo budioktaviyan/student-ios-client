@@ -28,6 +28,14 @@ extension StudentController: StudentView {
 
             return StudentData(id: data.id, name: data.name, email: data.name)
         }
+
+        let alert = UIAlertController(
+            title: "Student",
+            message: "Total student:\(entity.data.count)",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true, completion: nil)
     }
 
     func fetchFailed() {}
