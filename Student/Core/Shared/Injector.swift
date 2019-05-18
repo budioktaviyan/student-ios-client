@@ -17,7 +17,9 @@ class Injector {
     func inject() {
         assembler.apply(
             assemblies: [
-                ApplicationAssembly()
+                ApplicationAssembly(),
+                NetworkAssembly(),
+                StudentAssembly()
             ]
         )
     }

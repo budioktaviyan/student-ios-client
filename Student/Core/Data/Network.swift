@@ -7,7 +7,7 @@ final class Network<T: Codable> {
     private let baseURL: String
     private let scheduler: ConcurrentDispatchQueueScheduler
 
-    init(_ baseURL: String) {
+    init(_ baseURL: String = "http://df2f7e1b.ngrok.io") {
         self.baseURL = baseURL
         self.scheduler = ConcurrentDispatchQueueScheduler(
             qos: DispatchQoS(
@@ -15,5 +15,19 @@ final class Network<T: Codable> {
                 relativePriority: 1
             )
         )
+    }
+
+    func student(_ path: String) -> Single<T> {
+        let absolutePath: String = "\(baseURL)/\(path)"
+        return RxAlamofire
+            .data(
+                .get,
+                absolutePath,
+                encoding: URLEncoding()
+            )
+            .debug()
+            .asSingle()
+            .observeOn(scheduler)
+            .map(T.self)
     }
 }

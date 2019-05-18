@@ -12,11 +12,11 @@ class Usecase<T, Params> {
         self.uiThread = uiThread
     }
 
-    func buildUsecaseObservable(params: Params) -> Single<T> {
+    func buildUsecaseObservable(params: Params?) -> Single<T> {
         return Single.never()
     }
 
-    func execute(singleObserver: DefaultObserver<T>, params: Params) {
+    func execute(singleObserver: DefaultObserver<T>, params: Params?) {
         let single: Single<T> = buildUsecaseObservable(params: params)
             .subscribeOn(jobExecutor.getSchedulerType())
             .observeOn(uiThread.getSchedulerType())
