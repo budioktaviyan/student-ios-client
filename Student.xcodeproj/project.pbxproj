@@ -14,6 +14,14 @@
 		1F3071E1228FAD04008944F3 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F3071DC228FAD04008944F3 /* RxSwift.framework */; };
 		1F3071F1228FB4F8008944F3 /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3071F0228FB4F8008944F3 /* StudentController.swift */; };
 		1F3071F3228FB51D008944F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3071F2228FB51D008944F3 /* Router.swift */; };
+		1F3071F6228FB885008944F3 /* RxThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3071F5228FB885008944F3 /* RxThread.swift */; };
+		1F3071F8228FB8AE008944F3 /* UIThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3071F7228FB8AE008944F3 /* UIThread.swift */; };
+		1F3071FA228FB8D7008944F3 /* JobExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3071F9228FB8D7008944F3 /* JobExecutor.swift */; };
+		1F3071FD228FB932008944F3 /* DefaultObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3071FC228FB932008944F3 /* DefaultObserver.swift */; };
+		1F3071FF228FB983008944F3 /* Usecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3071FE228FB983008944F3 /* Usecase.swift */; };
+		1F307202228FBA28008944F3 /* PrimitiveSequenceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307201228FBA28008944F3 /* PrimitiveSequenceExt.swift */; };
+		1F307204228FBA60008944F3 /* SwiftExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307203228FBA60008944F3 /* SwiftExt.swift */; };
+		1F307206228FBA9A008944F3 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307205228FBA9A008944F3 /* UIViewExt.swift */; };
 		1F9ECB4C228FA13100CBCED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ECB4B228FA13100CBCED5 /* AppDelegate.swift */; };
 		1F9ECB51228FA13100CBCED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ECB4F228FA13100CBCED5 /* Main.storyboard */; };
 		1F9ECB53228FA13200CBCED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ECB52228FA13200CBCED5 /* Assets.xcassets */; };
@@ -28,6 +36,14 @@
 		1F3071DC228FAD04008944F3 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		1F3071F0228FB4F8008944F3 /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
 		1F3071F2228FB51D008944F3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1F3071F5228FB885008944F3 /* RxThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxThread.swift; sourceTree = "<group>"; };
+		1F3071F7228FB8AE008944F3 /* UIThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIThread.swift; sourceTree = "<group>"; };
+		1F3071F9228FB8D7008944F3 /* JobExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobExecutor.swift; sourceTree = "<group>"; };
+		1F3071FC228FB932008944F3 /* DefaultObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultObserver.swift; sourceTree = "<group>"; };
+		1F3071FE228FB983008944F3 /* Usecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usecase.swift; sourceTree = "<group>"; };
+		1F307201228FBA28008944F3 /* PrimitiveSequenceExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitiveSequenceExt.swift; sourceTree = "<group>"; };
+		1F307203228FBA60008944F3 /* SwiftExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExt.swift; sourceTree = "<group>"; };
+		1F307205228FBA9A008944F3 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		1F9ECB48228FA13100CBCED5 /* Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Student.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9ECB4B228FA13100CBCED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F9ECB50228FA13100CBCED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +91,8 @@
 		1F3071ED228FB4D7008944F3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1F3071FB228FB924008944F3 /* Domain */,
+				1F3071F4228FB863008944F3 /* Executor */,
 				1F3071EE228FB4E0008944F3 /* Shared */,
 			);
 			path = Core;
@@ -94,6 +112,35 @@
 				1F3071F0228FB4F8008944F3 /* StudentController.swift */,
 			);
 			path = Student;
+			sourceTree = "<group>";
+		};
+		1F3071F4228FB863008944F3 /* Executor */ = {
+			isa = PBXGroup;
+			children = (
+				1F3071F9228FB8D7008944F3 /* JobExecutor.swift */,
+				1F3071F5228FB885008944F3 /* RxThread.swift */,
+				1F3071F7228FB8AE008944F3 /* UIThread.swift */,
+			);
+			path = Executor;
+			sourceTree = "<group>";
+		};
+		1F3071FB228FB924008944F3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1F3071FC228FB932008944F3 /* DefaultObserver.swift */,
+				1F3071FE228FB983008944F3 /* Usecase.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1F307200228FBA15008944F3 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				1F307201228FBA28008944F3 /* PrimitiveSequenceExt.swift */,
+				1F307203228FBA60008944F3 /* SwiftExt.swift */,
+				1F307205228FBA9A008944F3 /* UIViewExt.swift */,
+			);
+			path = Ext;
 			sourceTree = "<group>";
 		};
 		1F9ECB3F228FA13000CBCED5 = {
@@ -117,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				1F3071ED228FB4D7008944F3 /* Core */,
+				1F307200228FBA15008944F3 /* Ext */,
 				1F3071EC228FB4CB008944F3 /* Feature */,
 				1F9ECB4B228FA13100CBCED5 /* AppDelegate.swift */,
 				1F9ECB4F228FA13100CBCED5 /* Main.storyboard */,
@@ -230,8 +278,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F9ECB4C228FA13100CBCED5 /* AppDelegate.swift in Sources */,
+				1F307202228FBA28008944F3 /* PrimitiveSequenceExt.swift in Sources */,
+				1F3071FF228FB983008944F3 /* Usecase.swift in Sources */,
 				1F3071F3228FB51D008944F3 /* Router.swift in Sources */,
+				1F3071FA228FB8D7008944F3 /* JobExecutor.swift in Sources */,
+				1F307206228FBA9A008944F3 /* UIViewExt.swift in Sources */,
+				1F3071FD228FB932008944F3 /* DefaultObserver.swift in Sources */,
 				1F3071F1228FB4F8008944F3 /* StudentController.swift in Sources */,
+				1F307204228FBA60008944F3 /* SwiftExt.swift in Sources */,
+				1F3071F6228FB885008944F3 /* RxThread.swift in Sources */,
+				1F3071F8228FB8AE008944F3 /* UIThread.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
