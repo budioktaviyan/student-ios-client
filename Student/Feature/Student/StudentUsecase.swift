@@ -1,17 +1,27 @@
 import RxSwift
 
-class StudentUsecase: Usecase<StudentEntity, Any> {
+class StudentUsecase: Usecase {
 
     private let repository: StudentRepository
+    private let executor: JobExecutor
+    private let thread: UIThread
 
     init(repository: StudentRepository,
          executor: JobExecutor,
          thread: UIThread) {
         self.repository = repository
-        super.init(jobExecutor: executor, uiThread: thread)
+        self.executor = executor
+        self.thread = thread
     }
 
-    override func buildUsecaseObservable(params: Any?) -> PrimitiveSequence<SingleTrait, StudentEntity> {
+    var jobExecutor: JobExecutor { return executor }
+    var uiThread: UIThread { return thread }
+    var disposables: CompositeDisposable { return CompositeDisposable() }
+}
+
+extension StudentUsecase {
+
+    func buildUsecaseObservable(params: Any?) -> Single<StudentEntity> {
         return repository.student()
     }
 }
