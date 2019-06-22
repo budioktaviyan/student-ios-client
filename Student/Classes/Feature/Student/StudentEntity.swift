@@ -1,6 +1,6 @@
 struct StudentEntity {
 
-    let data: [Student]
+    let student: [Student]
 }
 
 struct Student {

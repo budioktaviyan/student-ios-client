@@ -2,12 +2,21 @@ import Alamofire
 import RxAlamofire
 import RxSwift
 
+enum Key: String {
+    case URL = "URL"
+}
+
 final class Network<T: Codable> {
+
+    private static var info: [String: Any] {
+        guard let result: [String: Any] = Bundle.main.infoDictionary else { fatalError("Info.plist not found!") }
+        return result
+    }
 
     private let baseURL: String
     private let scheduler: ConcurrentDispatchQueueScheduler
 
-    init(_ baseURL: String = "http://b6527f61.ngrok.io") {
+    init(_ baseURL: String = "\(configuration(.URL))/api/") {
         self.baseURL = baseURL
         self.scheduler = ConcurrentDispatchQueueScheduler(
             qos: DispatchQoS(
@@ -29,5 +38,9 @@ final class Network<T: Codable> {
             .asSingle()
             .observeOn(scheduler)
             .map(T.self)
+    }
+
+    private static func configuration(_ key: Key) -> String {
+        return info[key.rawValue] as! String
     }
 }

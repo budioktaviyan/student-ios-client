@@ -14,6 +14,6 @@ class StudentDatasource: StudentDatasourceDelegate {
     var network: Network<T>!
 
     func student() -> PrimitiveSequence<SingleTrait, StudentResponse> {
-        return network.student("api/v1/student")
+        return network.student("v1/student")
     }
 }

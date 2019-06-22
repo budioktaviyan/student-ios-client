@@ -20,11 +20,11 @@ open class LoadingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    open func showAnimation() {
+    open func show() {
         indicator.startAnimating()
     }
 
-    open func hideAnimation() {
+    open func hide() {
         indicator.stopAnimating()
         self.removeFromSuperview()
     }

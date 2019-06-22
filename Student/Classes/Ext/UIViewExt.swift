@@ -2,14 +2,6 @@ import UIKit
 
 extension UIView {
 
-    func show() {
-        self.isHidden = false
-    }
-
-    func hide() {
-        self.isHidden = true
-    }
-
     func anchor(
         _ top: NSLayoutYAxisAnchor? = nil,
         left: NSLayoutXAxisAnchor? = nil,
