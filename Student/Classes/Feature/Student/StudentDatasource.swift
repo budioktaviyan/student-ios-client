@@ -11,7 +11,7 @@ class StudentDatasource: StudentDatasourceDelegate {
 
     typealias T = StudentResponse
 
-    private lazy var network = Injector.instance.resolve(type: Network<T>.self)
+    var network: Network<T>!
 
     func student() -> PrimitiveSequence<SingleTrait, StudentResponse> {
         return network.student("api/v1/student")

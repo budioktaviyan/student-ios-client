@@ -24,10 +24,9 @@
 		1F307206228FBA9A008944F3 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307205228FBA9A008944F3 /* UIViewExt.swift */; };
 		1F30720A228FBB93008944F3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307209228FBB93008944F3 /* Network.swift */; };
 		1F30720F228FBC32008944F3 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30720E228FBC32008944F3 /* ApplicationAssembly.swift */; };
-		1F307211228FBC93008944F3 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307210228FBC93008944F3 /* Injector.swift */; };
+		1F307211228FBC93008944F3 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307210228FBC93008944F3 /* Module.swift */; };
 		1F307213228FC129008944F3 /* StudentDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307212228FC129008944F3 /* StudentDatasource.swift */; };
 		1F307215228FC179008944F3 /* StudentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307214228FC179008944F3 /* StudentResponse.swift */; };
-		1F307217228FC229008944F3 /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307216228FC229008944F3 /* NetworkAssembly.swift */; };
 		1F307219228FC2DB008944F3 /* StudentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307218228FC2DB008944F3 /* StudentEntity.swift */; };
 		1F30721B228FC33B008944F3 /* StudentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30721A228FC33B008944F3 /* StudentFactory.swift */; };
 		1F30721D228FC3AC008944F3 /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F30721C228FC3AC008944F3 /* StudentRepository.swift */; };
@@ -35,6 +34,7 @@
 		1F307221228FC7EC008944F3 /* StudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307220228FC7EC008944F3 /* StudentView.swift */; };
 		1F307223228FC854008944F3 /* StudentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307222228FC854008944F3 /* StudentPresenter.swift */; };
 		1F307225228FCA4F008944F3 /* StudentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F307224228FCA4F008944F3 /* StudentAssembly.swift */; };
+		1F42DCF222BDB20100639211 /* StudentModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F42DCF122BDB20100639211 /* StudentModule.swift */; };
 		1F9ECB4C228FA13100CBCED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9ECB4B228FA13100CBCED5 /* AppDelegate.swift */; };
 		1F9ECB51228FA13100CBCED5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ECB4F228FA13100CBCED5 /* Main.storyboard */; };
 		1F9ECB53228FA13200CBCED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9ECB52228FA13200CBCED5 /* Assets.xcassets */; };
@@ -59,10 +59,9 @@
 		1F307205228FBA9A008944F3 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		1F307209228FBB93008944F3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1F30720E228FBC32008944F3 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
-		1F307210228FBC93008944F3 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		1F307210228FBC93008944F3 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		1F307212228FC129008944F3 /* StudentDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDatasource.swift; sourceTree = "<group>"; };
 		1F307214228FC179008944F3 /* StudentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentResponse.swift; sourceTree = "<group>"; };
-		1F307216228FC229008944F3 /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		1F307218228FC2DB008944F3 /* StudentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEntity.swift; sourceTree = "<group>"; };
 		1F30721A228FC33B008944F3 /* StudentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFactory.swift; sourceTree = "<group>"; };
 		1F30721C228FC3AC008944F3 /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		1F307220228FC7EC008944F3 /* StudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentView.swift; sourceTree = "<group>"; };
 		1F307222228FC854008944F3 /* StudentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentPresenter.swift; sourceTree = "<group>"; };
 		1F307224228FCA4F008944F3 /* StudentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAssembly.swift; sourceTree = "<group>"; };
+		1F42DCF122BDB20100639211 /* StudentModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModule.swift; sourceTree = "<group>"; };
 		1F9ECB48228FA13100CBCED5 /* Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Student.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F9ECB4B228FA13100CBCED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F9ECB50228FA13100CBCED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		1F3071EE228FB4E0008944F3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				1F307210228FBC93008944F3 /* Injector.swift */,
+				1F307210228FBC93008944F3 /* Module.swift */,
 				1F3071F2228FB51D008944F3 /* Router.swift */,
 			);
 			path = Shared;
@@ -143,6 +143,7 @@
 				1F307212228FC129008944F3 /* StudentDatasource.swift */,
 				1F307218228FC2DB008944F3 /* StudentEntity.swift */,
 				1F30721A228FC33B008944F3 /* StudentFactory.swift */,
+				1F42DCF122BDB20100639211 /* StudentModule.swift */,
 				1F307222228FC854008944F3 /* StudentPresenter.swift */,
 				1F30721C228FC3AC008944F3 /* StudentRepository.swift */,
 				1F307214228FC179008944F3 /* StudentResponse.swift */,
@@ -193,9 +194,18 @@
 			isa = PBXGroup;
 			children = (
 				1F30720E228FBC32008944F3 /* ApplicationAssembly.swift */,
-				1F307216228FC229008944F3 /* NetworkAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		1F42DCF022BDAA4300639211 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1F3071ED228FB4D7008944F3 /* Core */,
+				1F307200228FBA15008944F3 /* Ext */,
+				1F3071EC228FB4CB008944F3 /* Feature */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		1F9ECB3F228FA13000CBCED5 = {
@@ -218,13 +228,11 @@
 		1F9ECB4A228FA13100CBCED5 /* Student */ = {
 			isa = PBXGroup;
 			children = (
-				1F3071ED228FB4D7008944F3 /* Core */,
-				1F307200228FBA15008944F3 /* Ext */,
-				1F3071EC228FB4CB008944F3 /* Feature */,
+				1F42DCF022BDAA4300639211 /* Classes */,
 				1F9ECB4B228FA13100CBCED5 /* AppDelegate.swift */,
-				1F9ECB4F228FA13100CBCED5 /* Main.storyboard */,
-				1F9ECB54228FA13200CBCED5 /* LaunchScreen.storyboard */,
 				1F9ECB52228FA13200CBCED5 /* Assets.xcassets */,
+				1F9ECB54228FA13200CBCED5 /* LaunchScreen.storyboard */,
+				1F9ECB4F228FA13100CBCED5 /* Main.storyboard */,
 				1F9ECB57228FA13200CBCED5 /* Info.plist */,
 			);
 			path = Student;
@@ -335,6 +343,7 @@
 				1F307219228FC2DB008944F3 /* StudentEntity.swift in Sources */,
 				1F9ECB4C228FA13100CBCED5 /* AppDelegate.swift in Sources */,
 				1F30720F228FBC32008944F3 /* ApplicationAssembly.swift in Sources */,
+				1F42DCF222BDB20100639211 /* StudentModule.swift in Sources */,
 				1F307202228FBA28008944F3 /* PrimitiveSequenceExt.swift in Sources */,
 				1F30720A228FBB93008944F3 /* Network.swift in Sources */,
 				1F3071FF228FB983008944F3 /* Usecase.swift in Sources */,
@@ -352,8 +361,7 @@
 				1F30721D228FC3AC008944F3 /* StudentRepository.swift in Sources */,
 				1F307204228FBA60008944F3 /* SwiftExt.swift in Sources */,
 				1F307213228FC129008944F3 /* StudentDatasource.swift in Sources */,
-				1F307217228FC229008944F3 /* NetworkAssembly.swift in Sources */,
-				1F307211228FBC93008944F3 /* Injector.swift in Sources */,
+				1F307211228FBC93008944F3 /* Module.swift in Sources */,
 				1F3071F6228FB885008944F3 /* RxThread.swift in Sources */,
 				1F3071F8228FB8AE008944F3 /* UIThread.swift in Sources */,
 			);

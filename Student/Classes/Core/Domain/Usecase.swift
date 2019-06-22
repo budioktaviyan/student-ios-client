@@ -9,7 +9,7 @@ protocol Usecase {
     var uiThread: UIThread { get }
     var disposables: CompositeDisposable { get }
 
-    func buildUsecaseObservable(params: Params) -> Single<T>
+    func buildUsecaseObservable(params: Params?) -> Single<T>
 }
 
 extension Usecase {

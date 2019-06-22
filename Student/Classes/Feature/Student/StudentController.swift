@@ -2,14 +2,13 @@ import UIKit
 
 class StudentController: UIViewController {
 
-    private lazy var presenter = Injector.instance.resolve(type: StudentPresenter.self)
+    var presenter: StudentPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Student"
+        self.title = "Student"
+        self.view.backgroundColor = .white
 
-        presenter.attach(with: self)
         presenter.student()
     }
 }
@@ -21,12 +20,12 @@ extension StudentController: StudentView {
     func hideLoading() {}
 
     func fetchSuccess(entity: StudentEntity) {
-        let _ = entity.data.compactMap { data -> StudentData in
+        let _ = entity.data.compactMap { data -> Student in
             print(data.id)
             print(data.name)
             print(data.email)
 
-            return StudentData(id: data.id, name: data.name, email: data.name)
+            return Student(id: data.id, name: data.name, email: data.name)
         }
 
         let alert = UIAlertController(
@@ -38,5 +37,7 @@ extension StudentController: StudentView {
         present(alert, animated: true, completion: nil)
     }
 
-    func fetchFailed() {}
+    func fetchFailed(message: String) {
+        print(message)
+    }
 }

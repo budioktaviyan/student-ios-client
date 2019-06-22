@@ -1,8 +1,8 @@
 struct StudentResponse: Codable {
 
-    let data: [StudentData]?
+    let data: [Data]?
 
-    struct StudentData: Codable {
+    struct Data: Codable {
 
         let id: Int?
         let name: String?

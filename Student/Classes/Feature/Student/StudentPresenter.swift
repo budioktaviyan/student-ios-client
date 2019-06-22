@@ -2,11 +2,13 @@ import RxSwift
 
 class StudentPresenter {
 
+    weak var view: StudentView!
+
     private let usecase: StudentUsecase
 
-    private var view: StudentView?
-
-    init(usecase: StudentUsecase) {
+    init(view: StudentView,
+         usecase: StudentUsecase) {
+        self.view = view
         self.usecase = usecase
     }
 
@@ -14,19 +16,15 @@ class StudentPresenter {
         usecase.dispose()
     }
 
-    func attach(with view: StudentView) {
-        self.view = view
-    }
-
     func student() {
-        view?.showLoading()
-        usecase.execute(singleObserver: StudentUsecaseObserver(with: view!), params: nil)
+        view.showLoading()
+        usecase.execute(singleObserver: StudentUsecaseObserver(with: view), params: nil)
     }
 }
 
 fileprivate class StudentUsecaseObserver: DefaultObserver<StudentEntity> {
 
-    private let view: StudentView
+    private weak var view: StudentView!
 
     init(with view: StudentView) {
         self.view = view
@@ -38,9 +36,8 @@ fileprivate class StudentUsecaseObserver: DefaultObserver<StudentEntity> {
             view.hideLoading()
             view.fetchSuccess(entity: entity)
         case .error(let error):
-            print(error.localizedDescription)
             view.hideLoading()
-            view.fetchFailed()
+            view.fetchFailed(message: error.localizedDescription)
         }
     }
 }

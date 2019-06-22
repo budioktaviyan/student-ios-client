@@ -7,7 +7,7 @@ final class Network<T: Codable> {
     private let baseURL: String
     private let scheduler: ConcurrentDispatchQueueScheduler
 
-    init(_ baseURL: String = "http://df2f7e1b.ngrok.io") {
+    init(_ baseURL: String = "http://b6527f61.ngrok.io") {
         self.baseURL = baseURL
         self.scheduler = ConcurrentDispatchQueueScheduler(
             qos: DispatchQoS(

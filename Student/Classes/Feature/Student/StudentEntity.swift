@@ -1,9 +1,9 @@
 struct StudentEntity {
 
-    let data: [StudentData]
+    let data: [Student]
 }
 
-struct StudentData {
+struct Student {
 
     let id: Int
     let name: String

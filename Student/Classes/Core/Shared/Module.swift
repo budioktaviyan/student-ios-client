@@ -1,0 +1,4 @@
+protocol Module {
+
+    func presentView()
+}
